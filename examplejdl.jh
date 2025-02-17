@@ -1,0 +1,21 @@
+
+entity User {
+    id Long
+	name String
+}
+
+entity Product {
+    id Long
+	name String
+}
+
+entity UserProduct {
+    userId Long
+	productId Long
+}
+
+relationship ManyToMany {
+	User{id} to UserProduct{userId}
+    Product{id} to UserProduct{productId}
+}
+
